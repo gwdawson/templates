@@ -55,3 +55,9 @@ The workflow extracts release notes from the `CHANGELOG.md` file. For this to wo
 
 - 🔒 Security improvements or fixes.
 ```
+
+## **Examples**
+
+|           ![Example A Workflow](../assets/release_workflow_example_a.png)            |                  ![Example B Workflow](../assets/release_workflow_example_b.png)                   |
+| :----------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------: |
+| A push to main with no version change. The release and deployment steps are skipped. | A push to main with a version change. The workflow proceeds with the release and deployment steps. |
