@@ -84,7 +84,7 @@ jobs:
         run: |
           rsync -avz --delete \
             -e "ssh -o StrictHostKeyChecking=no" \
-            $GITHUB_WORKSPACE/dist.tar.gz ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/tmp/dist.tar.gz
+            dist.tar.gz ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/tmp/dist.tar.gz
           ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
             mkdir -p ${{ secrets.VPS_DEPLOYMENT_DIRECTORY }}
             tar --strip-components=1 -xzf /tmp/dist.tar.gz -C ${{ secrets.VPS_DEPLOYMENT_DIRECTORY }} 
